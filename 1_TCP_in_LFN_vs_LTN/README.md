@@ -2,7 +2,10 @@
 Lab 2: Flow and Congestion Control/Experiment Design
 =====================================================
 
-Please fill in your name and net ID in the table below.
+Compared the performance of TCP and UDT (UDP based file transfer protocol) based network environment by changing various metrics such as bandwidth, delayand loss on GENI (Global Environment for Network Research) testbed and evaluated the result on R-studio.
+
+---------------------------------------------------------------------
+
 
 Lab Assignment | 2 - Flow and Congestion Control
 -------------- | --------------------------------
