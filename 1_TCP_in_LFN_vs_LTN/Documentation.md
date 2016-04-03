@@ -168,7 +168,7 @@ control variant you have chosen (it may study others as well).
 Identify the paper you have chosen with a full citation, and
 briefly answer the following questions about it:
 The paper which is on the same lines as the experiment performed is:
-â€œTCP Hybla: a TCP enhancement for heterogeneous networksâ€, Carlo Caini and Rosario Firrincieli.
+“TCP Hybla: a TCP enhancement for heterogeneous networks”, Carlo Caini and Rosario Firrincieli.
 
 
  * What research question does this study seek to answer?
@@ -231,5 +231,5 @@ without considering all the TCP variants that are suitable for this network sett
 
 
 References:
-[1] â€œTCP Hybla: a TCP enhancement for heterogeneous networksâ€, Carlo Caini and Rosario Firrincieli.
+[1] “TCP Hybla: a TCP enhancement for heterogeneous networks”, Carlo Caini and Rosario Firrincieli.
 [2]  http://interstream.com/node/1084 
