@@ -239,5 +239,7 @@ without considering all the TCP variants that are suitable for this network sett
 
 
 References:
+
 [1] “TCP Hybla: a TCP enhancement for heterogeneous networks”, Carlo Caini and Rosario Firrincieli.
+
 [2]  http://interstream.com/node/1084 
