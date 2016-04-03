@@ -48,6 +48,7 @@ approximately 500kbps and hence a bandwidth- delay product less than
 10^5 bits. TCP Hybla is used to achieve the same instantaneous 
 bandwidth as that of a wired link, by eliminating RTT as a factor.
 This variant also uses SACK as quicker loss recovery mechanism.[1][2]
+
 -----------------------------------------------------------------------
 
 3) What is the other LFN TCP you have selected to use in your
@@ -71,6 +72,7 @@ are erroneously attributed to congestion, which activates
 the congestion avoidance mechanism. Satellite and wireless 
 links have an inherent property of being lossy. Hence 
 performance evaluation for these settings is justified.[1][2]
+
 ----------------------------------------------------------------------
 
 4) Describe the parameters you have chosen to vary in your
@@ -92,6 +94,7 @@ measurement of latency yields the RTT. Both wireless and satellite
 links have a characteristically high latency. For satellite links,
 this parameter varies significantly. Hence, an evaluation of the 
 TCP variants for different values of this parameter is imperative.
+
 ----------------------------------------------------------------------
 
 
@@ -105,6 +108,7 @@ exploit the network capacity to the maximum extent. Throughput is an indicator
 of such utilization. It indicates the number of successfully transmitted and
 acknowledged packets. Hence, throughput is the most apt metric to be 
 measured. This metric is measured using the Linux tool iperf.
+
 ---------------------------------------------------------------------------
 
 6) For each **experimental unit** in your experiment, describe:
@@ -133,6 +137,7 @@ Delay         -                Hybla                  Vegas           Reno
 150ms                         729kbps               496kbps          486kbps
 200ms                         679kbps               486kbps          403kbps
 250ms                         648kbps               471kbps          329kbps
+
 -----------------------------------------------------------------------------------
 
 7) Describe any evidence of *interactions* you can see in the results of your experiment.
@@ -142,6 +147,7 @@ it is possible that there is a small difference in slope, due to which interacti
 
 If an approximation is used, then the slopes can be considered equal (parallel plots), and hence
 there are no interactions.
+
 ------------------------------------------------------------------------------------
 
 8) Briefly describe the results of your experiment (1-2 paragraphs). You may include images by putting them on an online
@@ -161,6 +167,7 @@ TCP Vegas is one of the variants designed for LFNs and TCP Reno is a general
 purpose variant. TCP Hybla provides better throughput than both in LFNs as well 
 as Non-LFNs. This is because the bandwidth calculation eliminates the dependence 
 on RTT, which is critical in these networks. 
+
 -----------------------------------------------------------------------------------
 
 
