@@ -1,0 +1,141 @@
+root@client:/users/gevmanek# modprobe tcp_hybla
+root@client:/users/gevmanek# sysctl -w net.ipv4.tcp_congestion_control=hybla
+net.ipv4.tcp_congestion_control = hybla
+root@client:/users/gevmanek# tc qdisc add dev eth1 root netem delay 250ms 5ms loss 1%
+root@client:/users/gevmanek# iperf -c 10.1.1.2
+------------------------------------------------------------
+Client connecting to 10.1.1.2, TCP port 5001
+TCP window size: 23.5 KByte (default)
+------------------------------------------------------------
+[  3] local 10.1.1.1 port 41178 connected with 10.1.1.2 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.5 sec  2.38 MBytes  1.89 Mbits/sec
+root@client:/users/gevmanek# tc qdisc del dev eth1 root 
+root@client:/users/gevmanek# tc qdisc add dev eth1 root netem delay 300ms 5ms loss 1%
+root@client:/users/gevmanek# iperf -c 10.1.1.2
+------------------------------------------------------------
+Client connecting to 10.1.1.2, TCP port 5001
+TCP window size: 23.5 KByte (default)
+------------------------------------------------------------
+[  3] local 10.1.1.1 port 41182 connected with 10.1.1.2 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-12.6 sec  1.38 MBytes   919 Kbits/sec
+root@client:/users/gevmanek# tc qdisc del dev eth1 root 
+root@client:/users/gevmanek# tc qdisc add dev eth1 root netem delay 350ms 5ms loss 1%
+root@client:/users/gevmanek# iperf -c 10.1.1.2
+------------------------------------------------------------
+Client connecting to 10.1.1.2, TCP port 5001
+TCP window size: 23.5 KByte (default)
+------------------------------------------------------------
+[  3] local 10.1.1.1 port 41183 connected with 10.1.1.2 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-15.1 sec  1.25 MBytes   692 Kbits/sec
+root@client:/users/gevmanek# tc qdisc del dev eth1 root 
+root@client:/users/gevmanek# tc qdisc add dev eth1 root netem delay 400ms 5ms loss 1%
+root@client:/users/gevmanek# iperf -c 10.1.1.2
+------------------------------------------------------------
+Client connecting to 10.1.1.2, TCP port 5001
+TCP window size: 23.5 KByte (default)
+------------------------------------------------------------
+[  3] local 10.1.1.1 port 41189 connected with 10.1.1.2 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-20.0 sec  1.12 MBytes   471 Kbits/sec
+
+
+
+
+
+
+root@client:/users/gevmanek# modprobe tcp_vegas
+root@client:/users/gevmanek# sysctl -w net.ipv4.tcp_congestion_control=vegas
+net.ipv4.tcp_congestion_control = vegas
+root@client:/users/gevmanek# tc qdisc del dev eth1 root 
+root@client:/users/gevmanek# tc qdisc add dev eth1 root netem delay 250ms 5ms loss 1%
+root@client:/users/gevmanek# iperf -c 10.1.1.2
+------------------------------------------------------------
+Client connecting to 10.1.1.2, TCP port 5001
+TCP window size: 23.5 KByte (default)
+------------------------------------------------------------
+[  3] local 10.1.1.1 port 41192 connected with 10.1.1.2 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-16.5 sec  1.38 MBytes   699 Kbits/sec
+root@client:/users/gevmanek# tc qdisc del dev eth1 root 
+root@client:/users/gevmanek# tc qdisc add dev eth1 root netem delay 300ms 5ms loss 1%
+root@client:/users/gevmanek# iperf -c 10.1.1.2
+------------------------------------------------------------
+Client connecting to 10.1.1.2, TCP port 5001
+TCP window size: 23.5 KByte (default)
+------------------------------------------------------------
+[  3] local 10.1.1.1 port 41195 connected with 10.1.1.2 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-15.6 sec   768 KBytes   403 Kbits/sec
+root@client:/users/gevmanek# tc qdisc del dev eth1 root 
+root@client:/users/gevmanek# tc qdisc add dev eth1 root netem delay 350ms 5ms loss 1%
+root@client:/users/gevmanek# iperf -c 10.1.1.2
+------------------------------------------------------------
+Client connecting to 10.1.1.2, TCP port 5001
+TCP window size: 23.5 KByte (default)
+------------------------------------------------------------
+[  3] local 10.1.1.1 port 41196 connected with 10.1.1.2 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-16.1 sec   768 KBytes   390 Kbits/sec
+root@client:/users/gevmanek# tc qdisc del dev eth1 root 
+root@client:/users/gevmanek# tc qdisc add dev eth1 root netem delay 400ms 5ms loss 1%
+root@client:/users/gevmanek# iperf -c 10.1.1.2
+------------------------------------------------------------
+Client connecting to 10.1.1.2, TCP port 5001
+TCP window size: 23.5 KByte (default)
+------------------------------------------------------------
+[  3] local 10.1.1.1 port 41202 connected with 10.1.1.2 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-19.1 sec   640 KBytes   275 Kbits/sec
+
+
+
+
+
+
+root@client:/users/gevmanek# modprobe tcp_reno
+FATAL: Module tcp_reno not found.
+root@client:/users/gevmanek# sysctl -w net.ipv4.tcp_congestion_control=reno
+net.ipv4.tcp_congestion_control = reno
+root@client:/users/gevmanek# tc qdisc del dev eth1 root netem
+root@client:/users/gevmanek# tc qdisc add dev eth1 root netem delay 250ms 5ms loss 1%
+root@client:/users/gevmanek# iperf -c 10.1.1.2
+------------------------------------------------------------
+Client connecting to 10.1.1.2, TCP port 5001
+TCP window size: 23.5 KByte (default)
+------------------------------------------------------------
+[  3] local 10.1.1.1 port 41204 connected with 10.1.1.2 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-18.0 sec   896 KBytes   408 Kbits/sec
+root@client:/users/gevmanek# tc qdisc del dev eth1 root 
+root@client:/users/gevmanek# tc qdisc add dev eth1 root netem delay 300ms 5ms loss 1%
+root@client:/users/gevmanek# iperf -c 10.1.1.2
+------------------------------------------------------------
+Client connecting to 10.1.1.2, TCP port 5001
+TCP window size: 23.5 KByte (default)
+------------------------------------------------------------
+[  3] local 10.1.1.1 port 41207 connected with 10.1.1.2 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-17.2 sec   768 KBytes   365 Kbits/sec
+root@client:/users/gevmanek# tc qdisc del dev eth1 root 
+root@client:/users/gevmanek# tc qdisc add dev eth1 root netem delay 350ms 5ms loss 1%
+root@client:/users/gevmanek# iperf -c 10.1.1.2
+------------------------------------------------------------
+Client connecting to 10.1.1.2, TCP port 5001
+TCP window size: 23.5 KByte (default)
+------------------------------------------------------------
+[  3] local 10.1.1.1 port 41210 connected with 10.1.1.2 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-22.9 sec   640 KBytes   229 Kbits/sec
+root@client:/users/gevmanek# tc qdisc del dev eth1 root 
+root@client:/users/gevmanek# tc qdisc add dev eth1 root netem delay 400ms 5ms loss 1%
+root@client:/users/gevmanek# iperf -c 10.1.1.2
+------------------------------------------------------------
+Client connecting to 10.1.1.2, TCP port 5001
+TCP window size: 23.5 KByte (default)
+------------------------------------------------------------
+[  3] local 10.1.1.1 port 41214 connected with 10.1.1.2 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-31.7 sec   640 KBytes   166 Kbits/sec
