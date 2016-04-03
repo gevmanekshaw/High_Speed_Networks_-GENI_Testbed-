@@ -2,8 +2,8 @@
 
 Team Members:
 
-* Gautam Suthar- gvs234@nyu.edu
 * Gev Manekshaw - gkm240@nyu.edu
+* Gautam Suthar- gvs234@nyu.edu
 * Roland Dsa- rd1769@nyu.edu
 * Vikash Deo - vkd225@nyu.edu
 
